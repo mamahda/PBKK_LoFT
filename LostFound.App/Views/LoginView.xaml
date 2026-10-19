@@ -28,7 +28,7 @@
                         </StackPanel>
 
                         <StackPanel Margin="0,0,0,14">
-                            <TextBlock Text="NIM/NIP" Style="{StaticResource FieldLabel}" />
+                            <TextBlock Text="NRP" Style="{StaticResource FieldLabel}" />
                             <TextBox x:Name="IdentityBox" Text="{Binding IdentityNumber, UpdateSourceTrigger=PropertyChanged}" MaxLength="30" />
                             <TextBlock Text="{Binding IdentityNumberError}" Style="{StaticResource FieldError}" />
                         </StackPanel>
