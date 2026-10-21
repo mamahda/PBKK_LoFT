@@ -11,9 +11,9 @@ public sealed class AppSettings
     public string AdminFullName { get; set; } = "Administrator";
     public string AdminPassword { get; set; } = "admin12345";
 
-    public static AppSettings Load(string baseDirectory)
+    public static AppSettings Load(string configDirectory, string dataDirectory)
     {
-        string file = Path.Combine(baseDirectory, "appsettings.json");
+        string file = Path.Combine(configDirectory, "appsettings.json");
         AppSettings settings = new();
         if (File.Exists(file))
         {
@@ -26,8 +26,8 @@ public sealed class AppSettings
             settings = JsonSerializer.Deserialize<AppSettings>(File.ReadAllText(file), options) ?? new AppSettings();
         }
 
-        settings.DatabasePath = Resolve(baseDirectory, settings.DatabasePath, "lostfound.db");
-        settings.PhotosPath = Resolve(baseDirectory, settings.PhotosPath, "Photos");
+        settings.DatabasePath = Resolve(dataDirectory, settings.DatabasePath, "lostfound.db");
+        settings.PhotosPath = Resolve(dataDirectory, settings.PhotosPath, "Photos");
         if (string.IsNullOrWhiteSpace(settings.AdminIdentityNumber)) settings.AdminIdentityNumber = "admin";
         if (string.IsNullOrWhiteSpace(settings.AdminFullName)) settings.AdminFullName = "Administrator";
         if (string.IsNullOrEmpty(settings.AdminPassword)) settings.AdminPassword = "admin12345";

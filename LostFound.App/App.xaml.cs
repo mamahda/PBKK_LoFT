@@ -27,7 +27,8 @@ public partial class App : Application
         AppServices services;
         try
         {
-            AppSettings settings = AppSettings.Load(AppContext.BaseDirectory);
+            string dataDir = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "LostFound");
+            AppSettings settings = AppSettings.Load(AppContext.BaseDirectory, dataDir);
 
             var db = new SqliteConnectionFactory(settings.DatabasePath);
             DatabaseInitializer.Initialize(db, new AdminSeed(
