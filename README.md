@@ -1,6 +1,8 @@
 # Lost and Found Departemen Teknik Informatika
 
-Aplikasi desktop Windows untuk melaporkan dan mencari **barang temuan** dan **barang hilang** di lingkungan Departemen Teknik Informatika. Posting yang sudah selesai (barang dikembalikan atau ditemukan) otomatis masuk arsip. Antarmukanya dirancang dengan pendekatan Rich UI: visual, interaktif, dan mudah dipakai.
+**[Download Aplikasi (.exe)](https://drive.google.com/drive/folders/18E_Q1qutaS777t3ZYTvevU3ZBWz-t9dy?usp=sharing)**
+
+Aplikasi desktop Windows untuk melaporkan dan mencari **barang temuan** dan **barang hilang** di lingkungan Departemen Teknik Informatika.
 
 > Spesifikasi lengkap ada di [PRD.md](PRD.md).
 
